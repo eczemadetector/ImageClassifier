@@ -6,6 +6,8 @@ import numpy as np
 img = cv2.imread('InputImage.png')
 img = cv2.resize(img,(128,128))
 img = np.expand_dims(img,axis=0)
+#normalize
+img = img/255.
 
 #load model and predict
 model = load_model('ResNet50.h5')
